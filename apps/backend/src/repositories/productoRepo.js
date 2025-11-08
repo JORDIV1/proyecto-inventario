@@ -14,22 +14,18 @@ export class ProductoRepository {
   }
 
   //create
-  /**
-   *
-   * @param {import("../models/producto.js").Producto} entidad
-   */
+
   async insert(entidad) {
     const sql = `INSERT INTO productos (nombre, precio_cents, stock, categoria_id)
     VALUES(?,?,?,?)
     `;
     const params = [
       entidad.nombre,
-      entidad.precioCents,
+      entidad.precio_cents,
       entidad.stock,
-      entidad.categoriaId ?? null,
+      entidad.categoria_id ?? null,
     ];
-    // console.log("[ProductoRepo.insert] SQL:", sql.trim());
-    // console.log("[ProductoRepo.insert] PARAMS:", params);
+
     const [res] = await this.pool.execute(sql, params);
     return res.insertId;
   }
