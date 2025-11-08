@@ -1,0 +1,29 @@
+# --- Node ---
+node_modules/
+dist/
+build/
+coverage/
+
+# --- Entornos ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- IDE / Sistema ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# --- test ---
+tests/
+
+# --- Dumps/ Sistema ---
+Dump*.sql
+
+# --- Docker overrides locales ---
+docker-compose.override.yml
