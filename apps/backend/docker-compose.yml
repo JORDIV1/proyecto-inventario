@@ -5,10 +5,10 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: change_me
       MYSQL_DATABASE: proyecto_inventario
       MYSQL_USER: app
-      MYSQL_PASSWORD: 1xzfwxyz13?J
+      MYSQL_PASSWORD: change_me
     ports:
       - "3307:3306"
     volumes:
